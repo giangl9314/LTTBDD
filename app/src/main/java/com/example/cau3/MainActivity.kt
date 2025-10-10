@@ -74,7 +74,9 @@ fun ProfileScreen(modifier: Modifier = Modifier) {
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
-        ) {
+        )
+
+        {
             // Vòng tròn nền xanh nhạt sau avatar
             Box(
                 modifier = Modifier
@@ -105,7 +107,7 @@ fun ProfileScreen(modifier: Modifier = Modifier) {
 
             // Địa chỉ
             Text(
-                text = "Binh xuan, Tien Giang",
+                text = "Tiền Giang, Việt Nam",
                 fontSize = 16.sp,
                 color = Color.Gray
             )
