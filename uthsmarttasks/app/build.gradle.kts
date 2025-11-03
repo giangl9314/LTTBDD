@@ -42,6 +42,10 @@ android {
 }
 
 dependencies {
+    implementation("org.json:json:20230227")
+
+    implementation("androidx.compose.material3:material3:1.2.1")
+
     implementation("androidx.compose.material:material-icons-extended:1.7.5")
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:33.3.0"))

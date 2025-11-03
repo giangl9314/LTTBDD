@@ -45,8 +45,16 @@ fun ProfileScreen(navController: NavController) {
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                IconButton(onClick = { navController.popBackStack() }) {
-                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = Color(0xFF1E88E5))
+                IconButton(onClick = {
+                    navController.navigate("home") {
+                        popUpTo("home") { inclusive = false }
+                    }
+                }) {
+                    Icon(
+                        Icons.AutoMirrored.Filled.ArrowBack,
+                        contentDescription = "Back to Home",
+                        tint = Color(0xFF1E88E5)
+                    )
                 }
                 Text(
                     text = "Profile",
@@ -114,7 +122,12 @@ fun ProfileScreen(navController: NavController) {
             Spacer(modifier = Modifier.height(32.dp))
 
             Button(
-                onClick = { navController.popBackStack() },
+                onClick = {
+                    navController.navigate("taskList") {
+                        popUpTo("taskList") { inclusive = false }
+                    }
+                }
+                ,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
