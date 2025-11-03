@@ -128,8 +128,6 @@ fun OnboardingScreen(navController: NavController) {
                 )
             }
         }
-
-        // === Hàng chứa 2 nút chiếm hết chiều ngang ===
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -172,7 +170,7 @@ fun OnboardingScreen(navController: NavController) {
                         if (pagerState.currentPage < pages.lastIndex) {
                             pagerState.animateScrollToPage(pagerState.currentPage + 1)
                         } else {
-                            navController.navigate("Splash") {
+                            navController.navigate("login") {
                                 popUpTo("onboarding") { inclusive = true }
                             }
                         }
